@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthEdge Member Portal Demo</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #1a1a1a;
+    }
+    .wrapper {
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: #eef2ff;
+      color: #3b3bb3;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>HealthEdge Member Portal</h1>
+    <p>This is a lightweight test page for the Agentforce chat widget POC. Click the chat bubble in the bottom-right corner to start a conversation.</p>
+    <span class="badge">POC test page</span>
+  </div>
+
+  <!--
+    PASTE YOUR SALESFORCE EMBEDDED SERVICE SNIPPET BELOW, RIGHT BEFORE </body>.
+
+    Where to get it:
+    Setup → Quick Find → Embedded Service Deployments → open HealthEdge_Web_Chat
+    → look for the "Code Snippet" section → copy the whole <script>...</script> block
+    → replace this comment block with it.
+
+    It will look roughly like this (do NOT use this example as-is, it has fake IDs):
+
+    <script type='text/javascript'>
+      window.embeddedservice_bootstrap = {};
+      embeddedservice_bootstrap.settings = {};
+      embeddedservice_bootstrap.init(
+        '00Dxxxxxxxxxxxx',
+        'HealthEdge_Web_Chat',
+        'https://ust-bf-dev-ed.develop.my.salesforce-scrt.com',
+        {
+          scrt2URL: 'https://ust-bf-dev-ed.develop.my.salesforce-scrt.com'
+        }
+      );
+    </script>
+    <script type='text/javascript' src='https://ust-bf-dev-ed.develop.my.site.com/ESWHealthEdgeWebChat.../assets/js/bootstrap.min.js'></script>
+  -->
+
+</body>
+</html>
