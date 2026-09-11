@@ -49,30 +49,25 @@
     <span class="badge">POC test page</span>
   </div>
 
-  <!--
-    PASTE YOUR SALESFORCE EMBEDDED SERVICE SNIPPET BELOW, RIGHT BEFORE </body>.
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-    Where to get it:
-    Setup → Quick Find → Embedded Service Deployments → open HealthEdge_Web_Chat
-    → look for the "Code Snippet" section → copy the whole <script>...</script> block
-    → replace this comment block with it.
-
-    It will look roughly like this (do NOT use this example as-is, it has fake IDs):
-
-    <script type='text/javascript'>
-      window.embeddedservice_bootstrap = {};
-      embeddedservice_bootstrap.settings = {};
-      embeddedservice_bootstrap.init(
-        '00Dxxxxxxxxxxxx',
-        'HealthEdge_Web_Chat',
-        'https://ust-bf-dev-ed.develop.my.salesforce-scrt.com',
-        {
-          scrt2URL: 'https://ust-bf-dev-ed.develop.my.salesforce-scrt.com'
-        }
-      );
-    </script>
-    <script type='text/javascript' src='https://ust-bf-dev-ed.develop.my.site.com/ESWHealthEdgeWebChat.../assets/js/bootstrap.min.js'></script>
-  -->
+        embeddedservice_bootstrap.init(
+          '00Dg700000FMPvB',
+          'HealthEdge_Web_Chat',
+          'https://ust-bf-dev-ed.develop.my.site.com/ESWHealthEdgeWebChat1789038374159',
+          {
+            scrt2URL: 'https://ust-bf-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript' src='https://ust-bf-dev-ed.develop.my.site.com/ESWHealthEdgeWebChat1789038374159/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
