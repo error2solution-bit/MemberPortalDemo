@@ -137,50 +137,9 @@
       color: var(--ink);
     }
 
-    /* Bottom-right pointer toward the chat bubble */
-    .pointer {
-      position: fixed;
-      right: 108px;
-      bottom: 34px;
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
-      opacity: 0;
-      animation: fade-in 0.6s ease-out 1.4s forwards;
-      pointer-events: none;
-    }
-
-    .pointer .label {
-      background: var(--teal);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 500;
-      padding: 7px 12px;
-      border-radius: 6px;
-      white-space: nowrap;
-      margin-bottom: 6px;
-    }
-
-    .pointer svg {
-      width: 46px;
-      height: 40px;
-      flex-shrink: 0;
-    }
-
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .pointer { animation: none; opacity: 1; }
-    }
-
     @media (max-width: 480px) {
       main { padding: 56px 22px 140px; }
       h1 { font-size: 30px; }
-      .pointer { right: 78px; bottom: 24px; }
-      .pointer .label { font-size: 12px; }
     }
   </style>
 </head>
@@ -217,14 +176,6 @@
       Click it to begin.
     </p>
   </main>
-
-  <div class="pointer" aria-hidden="true">
-    <span class="label">Start here</span>
-    <svg viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 4C10 18 20 30 40 34" stroke="#173A36" stroke-width="2" stroke-linecap="round"/>
-      <path d="M30 30L40 34L37 24" stroke="#173A36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
 
   <script type='text/javascript'>
     function initEmbeddedMessaging() {
